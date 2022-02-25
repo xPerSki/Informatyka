@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>MySite</title>
+        <link rel="stylesheet" type="text/css" href="../../../../Working%20files/Kacper%20Kowalski/Projekt%20-%20ramki%20p&#322;ywaj&#261;ce,%20strona/Styl.css"/>
+        <meta name="description" content="Strona">
+        <meta name="keywords" content="MySite, Strona">
+        <meta name="author" content="PerSki">
+    </head>
+
+    <body>  <!-- 3 Zdjęcia -->
+        
+        <!--
+            <figure id="obramowka">
+                <img class="fota1" src="img/1after.png">
+                <figcaption id="podpis">Fotka1</figcaption>
+            </figure>
+            
+            <figure id="obramowka">
+                <img class="fota1" src="img/2afterafter.png">
+                <figcaption id="podpis">Fotka2</figcaption>
+            </figure>
+            
+            <figure id="obramowka">
+                <img class="fota1" src="img/3840977.jpg">
+                <figcaption id="podpis">Fotka3</figcaption>
+            </figure>
+        -->
+        
+        <div id="progressbar"></div>
+        <div id="scrollPath"></div>
+        <section id="srodek">
+            <h1 class="naglowek">Thanks for registering</h1>
+            <!--<center><h2>Tekst</h2></center>-->
+            <!--<p>
+            </p>-->
+        </section>
+
+        <script type="text/javascript">
+        let progress = document.getElementById('progressbar')
+        let totalHeight = document.body.scrollHeight - window.innerHeight;
+        window.onscroll = function() {
+            let progressHeight = (window.pageYOffset / totalHeight) * 100;
+            progress.style.height = progressHeight + "%"
+        }
+
+        function windowClose() {
+            window.open('', '_parent', '');
+            window.close();
+        }
+
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+        function end() {
+            alert('Thank You'); sleep(2000); window.close();
+        }
+        </script>
+
+        <div id='labele'>
+            <p id='newsletter'>Newsletter</p>
+            <input type='placeholder' placeholder='Example@mail.com' id='label1'>
+            <br><br>
+            <input type="datetime-local" id='label2'>
+            <br><br>
+            <label id='boxlabel1'><input type='checkbox' id='box1'> I agree to the rules</label>
+            <br><br><br>
+            <button type='button' onclick="end()" id='button1'>Submit</button>
+        </div>
+        <br><br><br>
+        <center><<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d80127.74176896029!2d16.921653047903263!3d51.12705688078713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470fe9c2d4b58abf%3A0xb70956aec205e0f5!2zV3JvY8WCYXc!5e0!3m2!1spl!2spl!4v1640078482983!5m2!1spl!2spl" width="50%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>></center>
+
+    </body>
+
+
+</html>
